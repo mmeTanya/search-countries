@@ -22,6 +22,8 @@ function onSearch(event) {
 
 function onCreateCountryCard(countries) {
   if (countries.length > 1 && countries.length < 10) {
+    refs.countryInfo.innerHTML = '';
+    refs.countryList.innerHTML = '';
     const markupCountryList = countries
       .map(country => {
         return `<li>
@@ -32,9 +34,9 @@ function onCreateCountryCard(countries) {
         </li>`;
       })
       .join('');
-    refs.countryInfo.innerHTML = '';
     refs.countryList.insertAdjacentHTML('beforeend', markupCountryList);
   } else if (countries.length === 1) {
+    refs.countryList.innerHTML = '';
     const markupCountryInfo = countries.map(country => {
       return `<div class='overlay'>
       <img src='${country.flags.svg}' alt='flag' width='30'/>
@@ -44,7 +46,6 @@ function onCreateCountryCard(countries) {
       <p>Population: ${country.population}</p>
       <p>Languages: ${Object.values(country.languages)}</p>`;
     });
-    refs.countryList.innerHTML = '';
     refs.countryInfo.insertAdjacentHTML('beforeend', markupCountryInfo);
   } else {
     refs.countryInfo.innerHTML = '';
