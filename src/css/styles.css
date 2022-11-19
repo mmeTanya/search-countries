@@ -33,6 +33,7 @@ body {
 
 .country-list {
   list-style: none;
+  margin: 0 auto;
 }
 
 .overlay {
@@ -54,13 +55,17 @@ body {
 }
 
 .country-info {
+  display: flex;
+  flex-direction: column;
   text-align: start;
   margin: 0 auto;
   width: 90%;
 }
 
 div,
-p {
+p, 
+ul,
+li {
   display: inline-block;
 }
 
