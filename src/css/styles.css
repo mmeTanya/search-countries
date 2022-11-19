@@ -12,14 +12,15 @@ body {
   line-height: 1.5;
   width: 100vw;
   height: 100vh;
+  text-align: center;
 }
 
 #search-box {
   font: inherit;
   padding: 8px;
   width: 75%;
-  max-width: 450px;
-  height: 30px;
+  max-width: 400px;
+  height: 50px;
   margin: 30px auto;
   border: 3px solid greenyellow;
 }
@@ -31,22 +32,29 @@ body {
 
 .country-list {
   list-style: none;
-  margin: 0 auto;
 }
 
 .overlay {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 15px;
 }
 
 .country {
-  margin: 0 auto;
+  margin: 0 15px;
   font-size: 30px;
   font-weight: 500;
 }
 
 .countries {
-  margin: 0 auto;
+  margin: 0 15px;
   font-size: 25px;
   font-weight: 500;
 }
+
+.country-info {
+  text-align: start;
+  margin: 0 auto;
+}
+
