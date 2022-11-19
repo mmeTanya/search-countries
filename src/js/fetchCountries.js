@@ -18,10 +18,6 @@ export default class ApiServiseCountries {
         if (countries.length > 10) {
           Notify.info('Too many matches found. Please enter a more specific name');
         }
-        if (countries.length === 1 && countries.filter(element => 
-          element.name.official.include(this.searchValue))) {
-          return
-        }
         return countries;
       });
   }

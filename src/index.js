@@ -35,6 +35,7 @@ function onCreateCountryCard(countries) {
       })
       .join('');
     refs.countryList.insertAdjacentHTML('beforeend', markupCountryList);
+    return
   } else if (countries.length === 1) {
     refs.countryList.innerHTML = '';
     const markupCountryInfo = countries.map(country => {
@@ -47,6 +48,7 @@ function onCreateCountryCard(countries) {
       <p>Languages: ${Object.values(country.languages)}</p>`;
     });
     refs.countryInfo.insertAdjacentHTML('beforeend', markupCountryInfo);
+    return
   } else {
     refs.countryInfo.innerHTML = '';
     refs.countryList.innerHTML = '';
