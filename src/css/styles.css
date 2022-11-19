@@ -10,13 +10,17 @@ body {
   background-color: lightsalmon;
   color: #212121;
   line-height: 1.5;
+  width: 100vw;
+  height: 100vh;
 }
 
 #search-box {
   font: inherit;
   padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
+  width: 75%;
+  max-width: 450px;
+  height: 30px;
+  margin: 30px auto;
   border: 3px solid greenyellow;
 }
 #search-box:hover,
@@ -27,6 +31,7 @@ body {
 
 .country-list {
   list-style: none;
+  margin: 0 auto;
 }
 
 .overlay {
@@ -35,13 +40,13 @@ body {
 }
 
 .country {
-  margin-left: 21px;
-  font-size: 25px;
+  margin: 0 auto;
+  font-size: 30px;
   font-weight: 500;
 }
 
 .countries {
-  margin-left: 21px;
-  font-size: 21px;
+  margin: 0 auto;
+  font-size: 25px;
   font-weight: 500;
 }

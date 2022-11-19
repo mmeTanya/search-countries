@@ -8,6 +8,7 @@ const refs = {
   countryInfo: document.querySelector('.country-info'),
   countryList: document.querySelector('.country-list'),
 };
+
 const apiServiseCountries = new ApiServiseCountries();
 
 refs.searchInput.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
@@ -28,7 +29,7 @@ function onCreateCountryCard(countries) {
       .map(country => {
         return `<li>
         <div class='overlay'>
-        <img src='${country.flags.svg}' alt='flag' width='30'/>
+        <img src='${country.flags.svg}' alt='flag' width='50'/>
         <h1 class='countries'>${country.name.official}</h1>
         </div>
         </li>`;
@@ -38,9 +39,10 @@ function onCreateCountryCard(countries) {
     return
   } else if (countries.length === 1) {
     refs.countryList.innerHTML = '';
+    refs.countryInfo.innerHTML = '';
     const markupCountryInfo = countries.map(country => {
       return `<div class='overlay'>
-      <img src='${country.flags.svg}' alt='flag' width='30'/>
+      <img src='${country.flags.svg}' alt='flag' width='50'/>
       <h1 class='country'>${country.name.official}</h1>
       </div>
       <p>Capital: ${country.capital}</p>
