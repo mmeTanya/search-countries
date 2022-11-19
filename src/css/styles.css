@@ -24,6 +24,7 @@ body {
   margin: 30px auto;
   border: 3px solid greenyellow;
 }
+
 #search-box:hover,
 #search-box:focus {
   background-color: pink;
@@ -50,11 +51,19 @@ body {
 .countries {
   margin: 0 15px;
   font-size: 25px;
-  font-weight: 500;
 }
 
 .country-info {
   text-align: start;
   margin: 0 auto;
+  width: 90%;
 }
 
+div,
+p {
+  display: inline-block;
+}
+
+li {
+  text-align: start;
+}
